@@ -5,3 +5,7 @@
 /server
 /public
 /mock
+.eslintrc.js
+.stylelintrc.js
+.postcssrc.js
+jest.config.js
