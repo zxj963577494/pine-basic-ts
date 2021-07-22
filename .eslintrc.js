@@ -1,12 +1,14 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
   extends: [
-    'eslint-config-airbnb-base',
+    'airbnb-base',
     'plugin:react/recommended',
-    'plugin:@typescript-eslint/recommended',
+    'plugin:react-hooks/recommended',
+    'plugin:compat/recommended',
     'plugin:jest/recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:prettier/recommended',
   ],
-  plugins: ['@typescript-eslint', 'react', 'jest', 'react-hooks'],
   env: {
     browser: true,
     node: true,
@@ -151,6 +153,9 @@ module.exports = {
     },
   ],
   settings: {
+    react: {
+      version: 'detect',
+    },
     'import/resolver': { node: { extensions: ['.js', '.jsx', '.ts', '.tsx'] } },
     'import/parsers': {
       '@typescript-eslint/parser': ['.ts', '.tsx', '.d.ts'],
